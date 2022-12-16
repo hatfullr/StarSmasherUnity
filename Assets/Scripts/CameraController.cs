@@ -113,14 +113,15 @@ public class CameraController : MonoBehaviour
 
 			float distanceZoom = distance + scrollAmount;
 
+			int sign = (int)Mathf.Sign(scrollAmount);
+
             // When we change the directions, just stop the zooming altogether at the current distance
-            if (zoomTimer.isActive && previousDirection != (int)Mathf.Sign(scrollAmount)) // Change in directions
+            if (zoomTimer.isActive && previousDirection != sign) // Change in directions
                 distanceZoom = distance;
 
             distanceZoomStart = distance;
             distanceZoomStop = distanceZoom;
-
-            previousDirection = (int)Mathf.Sign(scrollAmount);
+            previousDirection = sign;
 			
             // Start the zooming
             if (zoomTimer.limit == 0.0f) zoomTimer.onUpdate.Invoke();
