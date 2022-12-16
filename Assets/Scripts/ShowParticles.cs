@@ -57,13 +57,13 @@ public class ShowParticles : MonoBehaviour
         
 		
 		//StarSmasher d = data as StarSmasher;
-		//float max = 1f / Mathf.Log10((float)d.data.temperatures.Max());
+		//float max = 1f / Mathf.Log10((float)d.data.rho.Max());
 		
         for (int i = 0; i < amount; i++)
         {
             particles[i].position = positions[i];
             particles[i].startSize = sizes[i];
-            //particles[i].startColor = Color.Lerp(Color.red, Color.white, Mathf.Log10((float)d.data.temperatures[i]) * max);
+            //particles[i].startColor = Color.Lerp(Color.red, Color.white, Mathf.Log10((float)d.data.rho[i]) * max);
         }
 
         particleSystem.SetParticles(particles, amount);
