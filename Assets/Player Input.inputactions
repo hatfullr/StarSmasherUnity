@@ -1,0 +1,51 @@
+{
+    "name": "Player Input",
+    "maps": [
+        {
+            "name": "Default",
+            "id": "dd29a425-9fcf-4ce7-abad-9390d1916181",
+            "actions": [
+                {
+                    "name": "Move Camera",
+                    "type": "Button",
+                    "id": "9007efb9-f653-42d3-a5bd-0de6a611c4b0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d6789c28-e3b6-407c-ba66-b733b73b3583",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Hold(duration=1.401298E-45)",
+                    "processors": "",
+                    "groups": "Default",
+                    "action": "Move Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Default",
+            "bindingGroup": "Default",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
