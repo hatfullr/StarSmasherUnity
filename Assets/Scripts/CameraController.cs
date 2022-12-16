@@ -43,6 +43,13 @@ public class CameraController : MonoBehaviour
     private Vector3 previousWorld;
     private bool doingRotation = false;
 
+	void OnValidate()
+	{
+		Vector3 position = origin;
+		position.z -= distance;
+		transform.position = position;
+	}
+
     void Start()
     {
         previousWorld = camera.ScreenToWorldPoint(0.5f * new Vector2(Screen.width, Screen.height));
